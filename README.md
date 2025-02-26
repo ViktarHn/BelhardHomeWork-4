@@ -12,8 +12,11 @@
 Файл: data_loader.py
 
 Описание: Загружает данные с сайта UCI Machine Learning Repository и сохраняет их в файл online_shoppers.csv.
+
 Запуск:
+
 bash
+
 python data_loader.py
 
 2. Анализ данных (EDA)

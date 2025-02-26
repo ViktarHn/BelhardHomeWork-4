@@ -47,36 +47,56 @@ python data_preprocessing.py
 5. Обучение и оценка моделей
 Описание: В этом этапе обучаются различные модели машинного обучения, и для каждой модели вычисляются метрики (Accuracy, Precision, Recall, F1-score). Также выполняется кросс-валидация для оценки устойчивости моделей.
 Файлы:
+
 Gradient Boosting: cl_gradientbc.py
+
 CatBoost: cl_catboost.py
+
 AdaBoost: cl_adaboost.py
+
 LightGBM: cl_lightGBM.py
+
 XGBoost: cl_xgboost.py
+
 Запуск (для каждой модели):
 bash
+
 python cl_gradientbc.py
+
 python cl_catboost.py
+
 python cl_adaboost.py
+
 python cl_lightGBM.py
+
 python cl_xgboost.py
 
-6. Сравнение моделей
+
+7. Сравнение моделей
 Файл: model_comparison_viz.py
 Описание: Сравнивает все обученные модели по метрикам (Accuracy, Precision, Recall, F1-score) и визуализирует результаты.
 Результаты:
 Графики сравнения моделей по каждой метрике сохраняются в файлы:
+
 model_comparison_accuracy.png
+
 model_comparison_precision.png
+
 model_comparison_recall.png
+
 model_comparison_f1-score.png
+
 Запуск:
 bash
+
 python model_comparison_viz.py
 
-7. Выбор и сохранение лучшей модели
+8. Выбор и сохранение лучшей модели
 Файл: final_model.py
-Описание: Выбирает лучшую модель на основе сравнения метрик (в данном случае LightGBM), сохраняет её в файл lightgbm_model.pkl и визуализирует сравнение топ-5 моделей по F1-score.
+Описание:
+Выбирает лучшую модель на основе сравнения метрик (в данном случае LightGBM), сохраняет её в файл lightgbm_model.pkl и визуализирует сравнение топ-5 моделей по F1-score.
 Результаты:
+
 Лучшая модель сохраняется в lightgbm_model.pkl.
 График сравнения топ-5 моделей по F1-score сохраняется в top_models_f1_comparison.png.
 Запуск:
@@ -85,13 +105,22 @@ python final_model.py
 
 Результаты
 После выполнения всех этапов вы получите:
+
 Очищенные и предобработанные данные в файле cleaned_data.csv.
+
 Графики анализа данных: numerical_distributions.png, correlation_matrix.png.
+
 Логи обучения моделей (например, gradientbc.log, catboost.log и т.д.).
+
 Графики сравнения моделей: 
-model_comparison_accuracy.png, model_comparison_precision.png, 
-model_comparison_recall.png, model_comparison_f1-score.png.
+
+model_comparison_accuracy.png, 
+model_comparison_precision.png, 
+model_comparison_recall.png, 
+model_comparison_f1-score.png.
+
 Лучшую модель, сохраненную в lightgbm_model.pkl.
+
 График сравнения топ-5 моделей: top_models_f1_comparison.png.
 
 Заключение
@@ -117,8 +146,12 @@ python cl_gradientbc.py
 python cl_catboost.py
 
 python cl_adaboost.py
+
 python cl_lightGBM.py
+
 python cl_xgboost.py
+
 python model_comparison_viz.py
+
 python final_model.py
 

@@ -103,12 +103,19 @@ bash
 pip install -r requirements.txt
 Запустите скрипты в следующем порядке:
 bash
+
 python data_loader.py
+
 python online_shoppers_eda.py
+
 python data_cleaning.py
+
 python data_preprocessing.py
+
 python cl_gradientbc.py
+
 python cl_catboost.py
+
 python cl_adaboost.py
 python cl_lightGBM.py
 python cl_xgboost.py

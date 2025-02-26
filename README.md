@@ -60,16 +60,22 @@ bash
 python data_cleaning.py
 
 4. Предобработка данных
+
 Файл: data_preprocessing.py
+
 Описание: Выполняет предобработку данных, включая:
 Кодирование категориальных признаков (One-Hot Encoding).
 Масштабирование числовых признаков.
 Разделение данных на обучающую и тестовую выборки.
+
 Запуск:
+
 bash
+
 python data_preprocessing.py
 
 5. Обучение и оценка моделей
+
 Описание: В этом этапе обучаются различные модели машинного обучения, и для каждой модели вычисляются метрики (Accuracy, Precision, Recall, F1-score). Также выполняется кросс-валидация для оценки устойчивости моделей.
 Файлы:
 
@@ -101,7 +107,9 @@ python cl_xgboost.py
 
 Файл: model_comparison_viz.py
 Описание: Сравнивает все обученные модели по метрикам (Accuracy, Precision, Recall, F1-score) и визуализирует результаты.
+
 Результаты:
+
 Графики сравнения моделей по каждой метрике сохраняются в файлы:
 
 model_comparison_accuracy.png
@@ -113,23 +121,32 @@ model_comparison_recall.png
 model_comparison_f1-score.png
 
 Запуск:
+
 bash
 
 python model_comparison_viz.py
 
 7. Выбор и сохранение лучшей модели
+
 Файл: final_model.py
+
 Описание:
+
 Выбирает лучшую модель на основе сравнения метрик (в данном случае LightGBM), сохраняет её в файл lightgbm_model.pkl и визуализирует сравнение топ-5 моделей по F1-score.
+
 Результаты:
 
 Лучшая модель сохраняется в lightgbm_model.pkl.
 График сравнения топ-5 моделей по F1-score сохраняется в top_models_f1_comparison.png.
+
 Запуск:
+
 bash
+
 python final_model.py
 
 Результаты
+
 После выполнения всех этапов вы получите:
 
 Очищенные и предобработанные данные в файле cleaned_data.csv.
@@ -140,9 +157,12 @@ python final_model.py
 
 Графики сравнения моделей: 
 
-model_comparison_accuracy.png, 
-model_comparison_precision.png, 
+model_comparison_accuracy.png,
+
+model_comparison_precision.png,
+
 model_comparison_recall.png, 
+
 model_comparison_f1-score.png.
 
 Лучшую модель, сохраненную в lightgbm_model.pkl.
@@ -150,13 +170,17 @@ model_comparison_f1-score.png.
 График сравнения топ-5 моделей: top_models_f1_comparison.png.
 
 Заключение
+
 Лучшей моделью для прогнозирования намерения покупки оказался LightGBM с F1-score 0.6730. В будущем можно улучшить результаты, добавив feature engineering и оптимизацию гиперпараметров.
 
 Как запустить проект
+
 Установите зависимости:
+
 bash
 pip install -r requirements.txt
 Запустите скрипты в следующем порядке:
+
 bash
 
 python data_loader.py
